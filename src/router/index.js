@@ -43,39 +43,61 @@ export const constantRoutes = [
     hidden: true
   },
 
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/produImport',
+  //   children: [{
+  //     path: 'produImport',
+  //     name: '产品导入',
+  //     component: () => import('@/views/produImport/produImport'),
+  //     meta: { title: '产品导入', icon: 'form' }
+  //   }]
+  // },
   {
     path: '/',
     component: Layout,
-    redirect: '/produImport',
+    redirect: '/taskInput',
     children: [{
-      path: 'produImport',
-      name: '产品导入',
-      component: () => import('@/views/produImport/produImport'),
-      meta: { title: '产品导入', icon: 'form' }
+      path: 'taskInput',
+      name: '任务录入',
+      component: () => import('@/views/task/taskInput'),
+      meta: { title: '任务录入', icon: 'form' }
     }]
   },
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/rfidBindRecord',
+  //   children: [{
+  //     path: 'rfidBindRecord',
+  //     name: 'RFID绑定记录',
+  //     component: () => import('@/views/rfidBindRecord/rfidBindRecord'),
+  //     meta: { title: 'RFID绑定记录', icon: 'list' }
+  //   }]
+  // },
   {
     path: '/',
     component: Layout,
-    redirect: '/rfidBindRecord',
+    redirect: '/taskBind',
     children: [{
-      path: 'rfidBindRecord',
-      name: 'RFID绑定记录',
-      component: () => import('@/views/rfidBindRecord/rfidBindRecord'),
-      meta: { title: 'RFID绑定记录', icon: 'list' }
+      path: 'taskBind',
+      name: '任务绑定',
+      component: () => import('@/views/task/taskBind'),
+      meta: { title: '任务绑定', icon: 'form' }
     }]
   },
-  {
-    path: '/',
-    component: Layout,
-    redirect: '/rfidCheckRecord',
-    children: [{
-      path: 'rfidCheckRecord',
-      name: '过点记录查询',
-      component: () => import('@/views/rfidCheckRecord/rfidCheckRecord'),
-      meta: { title: '过点记录查询', icon: 'skill' }
-    }]
-  },
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/rfidCheckRecord',
+  //   children: [{
+  //     path: 'rfidCheckRecord',
+  //     name: '过点记录查询',
+  //     component: () => import('@/views/rfidCheckRecord/rfidCheckRecord'),
+  //     meta: { title: '过点记录查询', icon: 'skill' }
+  //   }]
+  // },
   {
     path: '/',
     component: Layout,
