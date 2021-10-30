@@ -18,7 +18,7 @@
       <el-input
         v-model="listQuery.rfidUid"
         class="filter-item"
-        placeholder="RFID Uid"
+        placeholder="RFID UID"
         style="width: 150px"
         @keyup.enter.native="handleFilter"
       />
@@ -87,11 +87,11 @@
           {{ scope.row.rfidUid }}
         </template>
       </el-table-column>
-      <el-table-column label="RFID Data" width="200" align="center">
-        <template slot-scope="scope">
-          {{ scope.row.rfidData }}
-        </template>
-      </el-table-column>
+<!--      <el-table-column label="RFID Data" width="200" align="center">-->
+<!--        <template slot-scope="scope">-->
+<!--          {{ scope.row.rfidData }}-->
+<!--        </template>-->
+<!--      </el-table-column>-->
       <el-table-column label="过点状态" width="150" align="center">
         <template slot-scope="scope">
           {{ checkStateOperations[scope.row.checkState].value }}
@@ -222,7 +222,7 @@ export default {
       const tempData = Object.assign({}, this.temp);
       tempData.timestamp = +new Date(tempData.timestamp);
       axios
-        .post("http://localhost/t/daleteTask", tempData)
+        .post("http://localhost/t/deleteTaskBind", tempData)
         .then((resData) => {
           this.$notify({
             title: "成功",

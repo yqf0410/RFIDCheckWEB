@@ -65,6 +65,7 @@
       border
       fit
       highlight-current-row
+      :row-style="isHis"
     >
       <el-table-column align="center" label="序号" width="95">
         <template slot-scope="scope">
@@ -445,6 +446,12 @@ export default {
             duration: 2000,
           });
         });
+    },isHis ({row, column, rowIndex, columnIndex}) {
+      if (row.his == 'true') {
+        return {
+          backgroundColor: 'rgba(153,153,153,0.36)'
+        }
+      }
     },
   },
 };
